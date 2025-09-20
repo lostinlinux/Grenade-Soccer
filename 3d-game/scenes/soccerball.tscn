@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dovtfdheh0wkp"]
+
+[ext_resource type="PackedScene" uid="uid://chmun8ovlvv1v" path="res://scenes/soccer_ball.fbx" id="1_bcya5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5gbhg"]
+
+[node name="soccerball" type="Node3D"]
+
+[node name="soccerball" parent="." instance=ExtResource("1_bcya5")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_5gbhg")
